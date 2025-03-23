@@ -1,0 +1,100 @@
+Here are 50 **hard** C pointer coding questions that can be asked in an interview. They cover **pointer arithmetic, function pointers, memory management, pointer-to-pointer, structures, and complex pointer operations**.
+
+---
+
+### **Pointer Basics & Arithmetic**
+1. What happens if you dereference a NULL pointer? Write a program to demonstrate it.
+2. Given `int a[5] = {1, 2, 3, 4, 5};`, write code to access the third element using pointer arithmetic.
+3. Implement a function that swaps two integers using only pointers (without using a temporary variable).
+4. Write a function to reverse an array **in-place** using pointers.
+5. Explain and write a program to demonstrate **pointer decay**.
+6. What will happen in this code? 
+   ```c
+   int arr[] = {10, 20, 30};
+   int *p = arr;
+   printf("%d", *(p++));
+   ```
+7. Given `int arr[5]`, print the address difference between `arr` and `arr+1`. Why is there a difference?
+8. Write a program that prints the **size of a pointer** to different data types (`char*`, `int*`, `float*`).
+9. Explain the difference between `const int *ptr`, `int *const ptr`, and `const int *const ptr`.
+10. Why does `sizeof(ptr)` not return the size of the memory allocated for the pointer?
+
+---
+
+### **Memory Management & Dynamic Allocation**
+11. Write a function that dynamically allocates memory for an array and initializes it with values.
+12. Implement a function that reallocates an array (similar to `realloc`) without using `realloc`.
+13. Write a function to **free a dynamically allocated 2D array**.
+14. What happens if you try to access memory after calling `free()`?
+15. Write a program that causes a **memory leak** and then fixes it.
+16. Implement a function that duplicates a string **without using `strcpy` or `strdup`**.
+17. Write a function that correctly resizes a dynamically allocated array.
+18. Explain the issue with `char *str = "hello";` and how to fix it.
+19. Write a program to check if a pointer is **dangling**.
+20. Implement your own `calloc()` using `malloc()`.
+
+---
+
+### **Pointer to Pointer & Multi-Level Indirection**
+21. What does a `double**` pointer mean? Write a program to demonstrate its usage.
+22. Implement a function to print a **2D array using double pointers (`int**` approach)**.
+23. How do you dynamically allocate a 3D array using pointers?
+24. Given `int **ptr;`, what is the correct way to allocate memory for an `m x n` matrix?
+25. Write a program to demonstrate pointer dereferencing in `int ***ptr`.
+26. What will be the output?
+    ```c
+    int x = 10, y = 20;
+    int *ptr1 = &x, *ptr2 = &y;
+    int **pp = &ptr1;
+    *pp = ptr2;
+    printf("%d", **pp);
+    ```
+27. Write a function to **swap two rows of a dynamically allocated 2D array**.
+28. Implement `void update(int **ptr)` to update the integer value stored at `ptr`.
+29. Write a function that returns a pointer to an array **allocated inside the function**.
+30. Write a function that prints elements of a jagged 2D array using `int**`.
+
+---
+
+### **Function Pointers & Callback Functions**
+31. What is a function pointer? Write a program to use it.
+32. Implement a function pointer array that maps different operations (add, subtract, multiply, divide).
+33. Write a function that accepts a function pointer as a callback.
+34. Write a C program to sort an array using a **custom comparator function** with function pointers.
+35. Implement a function pointer that returns a pointer to another function.
+36. Explain and demonstrate `void (*signal(int, void (*)(int)))(int)`.
+37. Write a function that takes a function pointer as an argument and calls it asynchronously using `pthread`.
+38. Explain how function pointers are used in **virtual tables** in C.
+39. How can function pointers be used to implement a **state machine**?
+40. Implement a **function pointer inside a structure** and use it.
+
+---
+
+### **Pointers & Structures**
+41. Implement a function that **returns a pointer to a dynamically allocated struct**.
+42. Write a function that swaps two struct variables using pointers.
+43. Implement a function to traverse a linked list using pointers.
+44. Write a function that reverses a **linked list using pointers only**.
+45. Implement a function that **deep copies a structure** containing pointers.
+46. Write a program that creates and manipulates a **structure containing an array of pointers**.
+47. Given the following struct, print the name without using the dot (`.`) operator:
+    ```c
+    struct Student {
+        char name[20];
+        int age;
+    };
+    ```
+48. Write a function that sorts an array of structs based on a given field using **qsort**.
+49. Implement a function to insert a node in a **sorted linked list** using pointers.
+50. Implement a **self-referential structure** using pointers.
+
+---
+
+### **Bonus Challenge**
+- Implement a **memory pool allocator** using pointers.
+- Write a function that **prints a circular linked list** using pointers.
+- Implement a **simple garbage collector** using reference counting.
+
+---
+
+These questions test your deep understanding of **memory management, pointer manipulation, function pointers, and low-level C programming**. Let me know if you need explanations or solutions for any! 🚀
