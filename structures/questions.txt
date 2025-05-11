@@ -1,0 +1,99 @@
+What is the difference between padding and packing in structures? How do you minimize memory waste?
+
+Given a struct with bitfields, explain how memory alignment works and how it might differ across compilers.
+
+How can you force a specific memory alignment for a struct? Write a code example.
+
+Explain how you’d serialize and deserialize a struct that contains both integers and char arrays.
+
+How do you write a portable struct that behaves consistently across different architectures (big vs little endian)?
+
+Can you have a flexible array member in the middle of a struct? Why or why not?
+
+How do you calculate the size of a struct at compile time vs runtime? Any pitfalls?
+
+What happens if you take the address of a packed struct and cast it to another type? Any dangers?
+
+What are anonymous structs/unions? Give a code example where it’s useful.
+
+Can a struct contain a pointer to its own type? What are the use cases?
+
+Write a struct to represent a network packet with variable-length payload. How would you handle memory safely?
+
+What is the difference between typedef struct and struct with a tag name?
+
+Explain strict aliasing rules and how they can mess up accessing struct members via type punning.
+
+How do you implement a simple linked list using structs? What is the cost of making it generic?
+
+How do structs behave when passed by value vs by reference in a function? Any gotchas?
+
+You have nested structs with both packed and unpacked members. How do you guarantee a fixed binary layout?
+
+What’s wrong with this: struct A { int x; }; struct A a = { .y = 5 };?
+
+How does sizeof() behave when applied to a struct with bitfields? Show with code.
+
+Is it safe to memcpy() a struct with pointer members? Why or why not?
+
+What is the role of volatile in a struct, especially in memory-mapped IO? Example?
+
+Why can’t you assign one flexible array member struct to another directly?
+
+Explain the alignment requirements of a struct containing char c; int i;. How do you avoid padding?
+
+Design a struct that can hold either an int, a float, or a string. How do you safely access the correct field?
+
+How can you check at compile-time if a struct fits into a particular memory size (say, 32 bytes)?
+
+In embedded, why might you prefer using structs over arrays for hardware registers? What dangers exist?
+
+Can a C++ struct have private members and methods? Explain with code.
+
+What is the default access specifier for a C++ struct vs a C++ class? Why?
+
+Can a struct inherit from a class in C++? Show a working example.
+
+Write a struct with a deleted copy constructor and explain the use case.
+
+How does default member initialization work in C++11+ structs?
+
+Is a struct in C++ just a “class with public members”? Explain subtle differences.
+
+What happens if you have virtual functions in a struct? Explain the impact on memory layout.
+
+Can you specialize a template using a struct as a key? Give a code sample.
+
+How do you write a struct with constexpr constructors? Use case?
+
+How do you implement a POD (Plain Old Data) struct in C++11/14/17? Any changes to watch for?
+
+What happens if you have multiple inheritance in a struct? Explain vtables if any.
+
+Write a struct with a lambda as a member. Is this allowed? What’s the caveat?
+
+How do you implement a singleton using a struct? Pros/cons?
+
+What is aggregate initialization? How does it apply to structs in C++17 and later?
+
+How can you use std::tuple to replace a struct? Pros/cons?
+
+Is it possible for a struct to have a pure virtual destructor? Why would you do that?
+
+Can a struct have friend functions? Show with code.
+
+Design a struct that holds a function pointer and use it for a callback system.
+
+How can std::aligned_storage be used with structs? Why would you care?
+
+Can you make a struct non-copyable but movable? Show how.
+
+What are empty base optimization and its effect on struct size?
+
+Explain how you’d use CRTP (Curiously Recurring Template Pattern) with structs.
+
+Is there any reason to make struct members mutable? Example?
+
+Can a struct be a template? Why or why not? Example?
+
+Write a struct with a static member variable and explain its usage and initialization rules
